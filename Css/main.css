@@ -1,0 +1,243 @@
+/* =========================================
+   1. BASE RESET & SMOOTH SCROLL
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* The magic property for gliding between sections */
+}
+
+body {
+    /* Merged your Skardu image with your rgb(37, 51, 50) dark teal color */
+    background: linear-gradient(rgba(26, 36, 35, 0.92), rgba(26, 36, 35, 0.95)), 
+                url('../images/Skardu2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   2. HEADER & NAVIGATION
+   ========================================= */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.nav-links, .auth-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a, .auth-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .auth-links a:hover {
+    color: #3498db;
+}
+
+.logo { font-weight: 700 !important; color: #fff !important; font-size: 1.2rem; }
+
+/* =========================================
+   3. SECTION LAYOUTS
+   ========================================= */
+.page-section {
+    padding: 100px 20px; 
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    scroll-margin-top: 60px; /* Prevents header from covering titles */
+}
+
+.alternate-bg {
+    background: rgba(0, 0, 0, 0.3); 
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 { font-size: 2.5rem; letter-spacing: 1px; }
+.accent-line { width: 60px; height: 4px; background: #3498db; margin: 10px auto 0; border-radius: 2px; }
+.accent-line-left { width: 60px; height: 4px; background: #3498db; margin: 10px 0 20px 0; border-radius: 2px; }
+
+/* =========================================
+   4. HOME / HERO SECTION
+   ========================================= */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.main-photo {
+    width: 180px; height: 180px; border-radius: 50%;
+    object-fit: cover; border: 4px solid #3498db;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3); margin-bottom: 1.5rem;
+}
+
+.hero-section h1 { font-size: 3rem; letter-spacing: 2px; margin-bottom: 0.5rem; font-weight: bold; }
+.tagline { color: #3498db; text-transform: uppercase; font-size: 1rem; letter-spacing: 4px; font-weight: bold; }
+
+.social-hub { display: flex; gap: 20px; margin-top: 2rem; justify-content: center; }
+.social-icon img { width: 50px; height: 50px; background: rgba(255, 255, 255, 0.1); padding: 12px; border-radius: 50%; transition: all 0.3s ease; }
+.social-icon img:hover { background: #3498db; transform: translateY(-5px); }
+
+/* =========================================
+   5. ABOUT GRID
+   ========================================= */
+.about-grid {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center;
+    background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 15px;
+    backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.profile-frame img { width: 100%; max-width: 300px; border-radius: 15px; margin: 0 auto; display: block; }
+.about-text h2 { font-size: 2.5rem; }
+.subtitle { color: #3498db; font-weight: bold; margin-bottom: 1.5rem; font-size: 1.1rem; }
+.about-text p { margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; }
+
+/* =========================================
+   6. EXPERIENCE CARDS
+   ========================================= */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { background: rgba(44, 36, 59, 0.8); padding: 2rem; border-radius: 12px; border-left: 4px solid #3498db; transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+.card h3 { display: flex; align-items: center; font-size: 1.2rem; margin-bottom: 0.5rem; font-style: italic; }
+.card .icon { width: 25px; height: 25px; margin-right: 12px; border-radius: 5px; }
+.org { font-style: italic; color: #bdc3c7; margin-bottom: 1rem; font-size: 0.95rem; }
+
+/* =========================================
+   7. SKILLS CHIPS
+   ========================================= */
+.skills-container { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.skill-chip {
+    background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(52, 152, 219, 0.4);
+    padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 500;
+    transition: all 0.3s ease; backdrop-filter: blur(5px); font-size: 1.1rem;
+}
+.skill-chip:hover { background: rgba(52, 152, 219, 0.2); border-color: #3498db; transform: translateY(-4px); color: #3498db; }
+
+/* =========================================
+   8. PROJECTS GRID
+   ========================================= */
+.projects-grid { display: flex; flex-direction: column; gap: 3rem; }
+.project-card {
+    display: grid; grid-template-columns: 1fr 1.5fr; background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+.project-card:hover { transform: translateY(-5px); border-color: rgba(52, 152, 219, 0.3); }
+.project-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a nice dark background behind the image if it doesn't fill the box completely */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; /* <--- The magic fix */
+    transition: transform 0.5s ease; 
+}
+.project-card:hover .project-image img { 
+    transform: scale(1.05);
+}
+.project-info { 
+    padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+.project-info h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.tech-stack { color: #3498db; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+footer { text-align: center; padding: 2rem; background: rgba(0, 0, 0, 0.8); color: rgba(255,255,255,0.5); }
+
+/* =========================================
+   10. MOBILE RESPONSIVENESS (Replaces mobile.css for this page)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Stack Nav Links */
+    .main-nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .nav-links, .auth-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* Adjust Section Paddings */
+    .page-section {
+        padding: 140px 15px 50px 15px; /* More top padding so stacked header doesn't cover content */
+        height: auto;
+    }
+
+    /* Stack About Grid Vertically */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .accent-line-left {
+        margin: 10px auto 20px auto; /* Centers the blue line on mobile */
+    }
+
+    /* Stack Project Cards */
+    .project-card {
+        grid-template-columns: 1fr; /* Image goes on top, text on bottom */
+    }
+    .project-image {
+        height: 200px; /* Restricts image height so it doesn't take up the whole phone screen */
+    }
+    .project-info {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    /* Shrink Typography */
+    .hero-section h1 { font-size: 2.2rem; }
+    .section-header h2 { font-size: 2rem; }
+    .tagline { font-size: 0.85rem; }
+}

@@ -1,0 +1,115 @@
+body{
+    background-color:rgb(37, 51, 50);
+    color: white;
+    padding-top: 14rem;
+    font-family: DM sans;
+    font-size: 1.5rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    position: fixed
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container #login {
+    position: absolute;
+    right: 0;
+}
+
+nav ul {
+    list-style-type: none; /* Removes the dots from the list */
+    display: flex; /* Aligns the list items horizontally */
+    justify-content: flex-start; /* Aligns the list items to the left */
+    padding: 1rem 2rem; /* Adds padding to the container */
+   
+}
+
+nav ul li {
+    margin: 0 2.5rem; /* Adds horizontal spacing between the list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the underline from the links */
+    color: white; /* Sets the text color of the links */
+    font-weight: bold; /* Makes the text bold */
+}
+.login{
+    width: 40%;
+    height: 40%;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    margin: auto;
+    padding: 2rem;
+    line-height: 5rem;
+    background-color: rgba(44, 58, 69, 0.675);
+    border-color: white;
+    border: 0.1rem solid;
+    text-align: center;
+
+}
+h1{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+.login legend{
+    width: 100%;
+    text-align: center; 
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem;
+
+}
+.login input{
+    width: 30%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-header h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #c0392b;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+footer{
+    bottom: 0;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.825);
+    position: fixed;
+    width: 100%;
+}

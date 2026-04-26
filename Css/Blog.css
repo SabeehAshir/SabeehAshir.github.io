@@ -1,0 +1,257 @@
+
+body{
+    background-color:rgb(37, 51, 50);
+    color: white;
+    padding-top: 6rem;
+    font-family: DM sans;
+    font-size: 1.5rem;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+/* Main content container */
+main, form, section {
+    flex: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.825);
+    width: 100%;
+    margin-top: auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    position: fixed
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container #login {
+    position: absolute;
+    right: 0;
+}
+
+nav ul {
+    list-style-type: none; /* Removes the dots from the list */
+    display: flex; /* Aligns the list items horizontally */
+    justify-content: flex-start; /* Aligns the list items to the left */
+    padding: 1rem 2rem; /* Adds padding to the container */
+   
+}
+
+nav ul li {
+    margin: 0 2.5rem; /* Adds horizontal spacing between the list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the underline from the links */
+    color: white; /* Sets the text color of the links */
+    font-weight: bold; /* Makes the text bold */
+}
+#blog{
+    margin: 10rem auto;
+    width: 40%;
+    height: 50%;
+    padding: 0.5rem;
+    line-height: 3rem;
+    background-color: rgba(44, 58, 69, 0.675);
+    border-color: white;
+    border: 0.1rem solid;
+    text-align: center;
+}
+#blog legend{
+    width: 100%;
+    text-align: center; 
+    font-size: 2rem;
+    color: white;
+    padding: 0.5rem;
+}
+#blog input{
+    width: 50%;
+    height: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+}
+#blog textarea{
+    width: 50%;
+    height: 8rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+}
+.blog-section {
+    
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.post {
+    background-color: rgba(44, 58, 69, 0.75);
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 60%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.post-header h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.post-header h2 {
+    font-size: 1rem;
+    color: #ccc;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+#addpost{
+    display: block;
+}
+button {
+    background-color: #2e8b57;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2rem auto;
+    color: white;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #246b45;
+}
+#preview_form {
+    text-align: center;
+    font-weight: bold; ;
+    margin-top: 8rem;
+}
+/* Preview container */
+#preview_section {
+    background-color: #1f373e;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Post header */
+.post_header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Post title */
+#post_title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Post date */
+#post_date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Post content */
+#post_content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f2f2f2;
+    white-space: pre-wrap;
+    margin-top: 1rem;
+}
+
+/* Divider */
+#preview_section hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1.5rem 0;
+}
+
+/* Button wrapper */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Buttons */
+.buttons button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit;
+}
+
+#submit {
+    background-color: #007bff;
+    color: white;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+#cancel-post {
+    background-color: #6c757d;
+    color: white;
+}
+
+#cancel-post:hover {
+    background-color: #495057;
+}
+
+
+footer {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.825);
+    width: 100%;
+    margin-bottom: 0;
+}
+
