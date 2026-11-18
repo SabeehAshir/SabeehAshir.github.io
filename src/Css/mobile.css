@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px){
     body {
         background-color: rgb(87, 153, 175); /* Example style for testing */
         padding-top: 20rem; /* Adjust the top padding for smaller screens */

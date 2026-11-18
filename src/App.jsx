@@ -1,7 +1,6 @@
 import './Css/Reset.css';
 import './Css/main.css';
-import './Css/mobile.css'; // Note: Media queries are handled inside the CSS file, not on the import line in React.
-
+import './Css/mobile.css';
 function App() {
   return (
     <>
