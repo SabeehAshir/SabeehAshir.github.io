@@ -11,7 +11,7 @@ function App() {
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience & Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="./public/assets/Sabeeh_Ashir_CV.pdf" target="_blank" rel="noreferrer">CV</a></li>
+                <li><a href="/assets/Sabeeh_ashir_CV.pdf" target="_blank" rel="noreferrer">CV</a></li>
             </ul>
             <ul className="auth-links">
                 <li><a className="login-btn" onClick={() => alert('Login/Admin features are disabled on this version. Check Github for the full code!')}>Login</a></li>
