@@ -1,0 +1,72 @@
+@media screen and (max-width: 480px) {
+    body {
+        background-color: rgb(87, 153, 175); /* Example style for testing */
+        padding-top: 20rem; /* Adjust the top padding for smaller screens */
+    }
+
+    .container {
+        display: block;
+        padding: 1rem;
+    }
+    .container #login {
+        position: relative;
+    }
+
+    header {
+        display: block;
+        flex-direction: column; /* Stack the header items vertically */
+        position: absolute;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the navigation items vertically */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Add margin between the navigation items */
+    }
+
+    .content {
+        margin-top: 5rem; /* Adjust the top margin for smaller screens */
+    }
+
+    .Links {
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center;
+    }
+
+    .Links img {
+        margin: 0.5rem 0; /* Add margin between the images */
+    }
+
+    #blog {
+        width: 90%; /* Make the blog section wider on smaller screens */
+        height: auto; /* Adjust the height to fit the content */
+        padding: 1rem;
+        margin-bottom: 8rem;
+    }
+
+    #blog input, #blog textarea {
+        width: 90%; /* Make the input and textarea elements wider on smaller screens */
+    }
+    .About{
+        display: block;
+    }
+    .Experience_list,.Education_list{
+        display: block;
+    }
+    .project_list {
+        margin-left: 2rem;
+        display: inline;
+    }
+    .project_list img{
+        margin-left: 1rem;
+    }
+
+    footer {
+        flex-direction: column; /* Stack the footer items vertically */
+        align-items: center;
+        padding: 1rem;
+    }
+}
