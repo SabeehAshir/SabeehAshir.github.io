@@ -2,37 +2,44 @@ import './Css/Reset.css';
 import './Css/main.css';
 import './Css/mobile.css';
 import ProjectsSection from "./components/ProjectsSection";
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import Toast from "./components/Toast";
 function App() {
+  const [toastMessage, setToastMessage] = useState("");
+
+useEffect(() => {
+  if (!toastMessage) return;
+  const timer = setTimeout(() => setToastMessage(""), 2500);
+  return () => clearTimeout(timer);
+}, [toastMessage]);
+
+const handleCopyEmail = (e) => {
+  if (e) e.preventDefault();
+  navigator.clipboard.writeText("Sabeehashir10@gmail.com");
+  setToastMessage("Email copied: Sabeehashir10@gmail.com");
+};
   return (
     <>
-      <header>
-        <nav className="main-nav">
-            <ul className="nav-links">
-                <li><a href="#home" className="logo">Sabeeh Ashir</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience & Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="/assets/Sabeeh_ashir_CV.pdf" target="_blank" rel="noreferrer">CV</a></li>
-            </ul>
-            <ul className="auth-links">
-                <li><a className="login-btn" onClick={() => alert('Login/Admin features are disabled on this version. Check Github for the full code!')}>Login</a></li>
-            </ul>
-        </nav>
-      </header>
+      <Navbar onCopyEmail={handleCopyEmail}/>
 
       <main>
         <section id="home" className="hero-section alternate-bg">
             <div className="profile-container">
                 <img src="images/sabeeh.jpg" alt="Sabeeh Ashir" className="main-photo" />
                 <h1>Sabeeh Ashir</h1>
-                <p className="tagline">2nd-Year Computer Science Student</p>
+                <p className="tagline">Final Year Computer Science Student</p>
             </div>
             <div className="social-hub">
                 <a href="https://www.linkedin.com/in/sabeeh-ashir-50ab6a340/" target="_blank" rel="noreferrer" className="social-icon">
                     <img src="images/linkedin.png" alt="LinkedIn" />
                 </a>
-                <a href="mailto:Sabeehashir10@gmail.com" className="social-icon">
-                    <img src="images/email2.png" alt="Email" />
+                <a href="mailto:Sabeehashir10@gmail.com"
+                   className="social-icon"
+                   onClick={handleCopyEmail}
+                   title="Click to copy email"
+                >
+                  <img src="images/email2.png" alt="Email" />
                 </a>
                 <a href="https://github.com/SabeehAshir" target="_blank" rel="noreferrer" className="social-icon">
                     <img src="images/github.png" alt="github" />
@@ -49,9 +56,9 @@ function App() {
                     <div className="about-text">
                         <h2>About Me</h2>
                         <div className="accent-line-left"></div>
-                        <p className="subtitle">2nd-Year Computer Science Student @ QMUL</p>
+                        <p className="subtitle">Final Year Computer Science Student @ QMUL</p>
                         
-                        <p>I am a second-year Computer Science student at Queen Mary University of London with a passion for turning complex problems into clean, efficient software. Having established a strong technical foundation, I am actively expanding my expertise in modern web frameworks, Artificial Intelligence, and Cybersecurity.</p>
+                        <p>I am a Final year Computer Science student at Queen Mary University of London with a passion for turning complex problems into clean, efficient software. Having established a strong technical foundation, I am actively expanding my expertise in modern web frameworks, Artificial Intelligence, and Cybersecurity.</p>
                         
                         <p>Beyond academics, I thrive in collaborative, agile environments. I am always eager to team up with other developers to build innovative solutions that make a real-world impact.</p>
                     </div>
@@ -126,12 +133,13 @@ function App() {
         </section>
 
         <ProjectsSection />
-        
+
       </main>
 
       <footer>
         <p>&copy; 2026 Sabeeh Ashir. All rights reserved.</p>
       </footer>
+      <Toast message={toastMessage} />
     </>
   );
 }
