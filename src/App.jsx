@@ -1,6 +1,7 @@
 import './Css/Reset.css';
 import './Css/main.css';
 import './Css/mobile.css';
+import ProjectsSection from "./components/ProjectsSection";
 function App() {
   return (
     <>
@@ -124,72 +125,8 @@ function App() {
             </div>
         </section>
 
-        <section id="projects" className="page-section">
-            <div className="container">
-                <div className="section-header">
-                    <h2>My Projects</h2>
-                    <div className="accent-line"></div>
-                </div>
-
-                <div className="projects-grid">
-                    <article className="project-card">
-                        <figure className="project-image">
-                            <img src="images/Academy.png" alt="Academy project" />
-                        </figure>
-                        <div className="project-info">
-                            <h3>Noor Academy Web Application (In Progress) </h3>
-                            <p className="tech-stack">Next.js / Prisma / PostgreSQL / React / Role-Based Access / Rest API / SQL integration</p>
-                            <p>Developing a comprehensive web application for Noor academy, enabling students to view their timetables, access course materials, and track their progress. The application features a user-friendly interface and robust backend functionality, providing an efficient platform for students to manage their academic activities.</p>
-                        </div>
-                    </article>
-                    
-                    <article className="project-card">
-                        <figure className="project-image">
-                            <img src="images/FDM.png" alt="FDM Expense Flow Application" />
-                        </figure>
-                        <div className="project-info">
-                            <h3>FDM Expense APP</h3>
-                            <p className="tech-stack"> React / Django / Full Stack Development / Rest API / Python / Web App / Role-Based Access</p>
-                            <p>Designed and developed a full-stack expense management application for FDM Group. The app allows users to track and manage their expenses efficiently, featuring a user friendly interface and robust backend functionality.</p>
-                            <p>Designed Line Manager and Finance Team fully working Dashboard allowing them to Review, Approve and Reject expense claims submitted by employees.</p>
-                        </div>
-                    </article>
-
-                    <article className="project-card">
-                        <figure className="project-image">
-                            <img src="images/BerryGuide.png" alt="BerryGuide Weather App" />
-                        </figure>
-                        <div className="project-info">
-                            <h3>Weather app for Berry Farmers</h3>
-                            <p className="tech-stack"> React / Figma / OpenWeather API / Rest API / Automation</p>
-                            <p>Designed and developed a weather application tailored for berry farmers. The app provides real time weather updates, forecasts, and alerts to help farmers make informed decisions about their crops. The user friendly interface allows farmers to easily access critical weather information specific to their location.</p>
-                        </div>
-                    </article>
-
-                    <article className="project-card">
-                        <figure className="project-image">
-                            <img src="images/Portfolio-Preview.png" alt="Personal Portfolio Website" />
-                        </figure>
-                        <div className="project-info">
-                            <h3>Personal Portfolio Website</h3>
-                            <p className="tech-stack">HTML / CSS / JavaScript / PHP / SQL / Rest API</p>
-                            <p>Designed and developed a personal portfolio website to showcase my skills, projects, and experience. The site features a clean, responsive design and highlights my background in computer science.</p>
-                        </div>
-                    </article>
-
-                    <article className="project-card">
-                        <figure className="project-image">
-                            <img src="images/visual programming.png" alt="Mobile Tariff Application" />
-                        </figure>
-                        <div className="project-info">
-                            <h3>Mobile Tariff Application</h3>
-                            <p className="tech-stack">C# / Visual Programming / Automation / Role-Based Access</p>
-                            <p>Developed a mobile tariff application for network users. It enables users to select their preferred network, tariff, data limits, and minutes. The system actively tracks data usage and calculates remaining allowances.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <ProjectsSection />
+        
       </main>
 
       <footer>
