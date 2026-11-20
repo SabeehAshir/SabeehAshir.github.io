@@ -6,7 +6,7 @@ const NAV_ITEMS = [
   { id: "projects", label: "Projects" }
 ];
 
-const Navbar = ({ onCopyEmail }) => {
+const Navbar = ({ onCopyEmail,onOpenPalette }) => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -89,6 +89,17 @@ const Navbar = ({ onCopyEmail }) => {
                 >
                  Contact
                 </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className="cmd-trigger-btn"
+              onClick={onOpenPalette}
+              title="Open Command Palette (Ctrl + K)"
+            >
+              <span>Search</span>
+              <kbd className="cmd-kbd">Ctrl K</kbd>
+            </button>
           </li>
         </ul>
       </nav>

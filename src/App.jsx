@@ -7,6 +7,9 @@ import Navbar from "./components/Navbar";
 import Toast from "./components/Toast";
 import ExperienceSection from "./components/ExperienceSection";
 import RevealOnScroll from "./components/RevealOnScroll";
+import StarfieldBackground from "./components/StarfieldBackground";
+import CommandPalette from "./components/CommandPalette";
+import ProjectModal from "./components/ProjectModal";
 function App() {
   const [toastMessage, setToastMessage] = useState("");
 
@@ -16,6 +19,21 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, [toastMessage]);
 
+const [isPaletteOpen, setIsPaletteOpen] = useState(false);
+const [selectedProject, setSelectedProject] = useState(null);
+
+useEffect(() => {
+  const handleGlobalKeyDown = (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      setIsPaletteOpen((prev) => !prev);
+    }
+  };
+
+  window.addEventListener("keydown", handleGlobalKeyDown);
+  return () => window.removeEventListener("keydown", handleGlobalKeyDown);
+}, []);
+
 const handleCopyEmail = (e) => {
   if (e) e.preventDefault();
   navigator.clipboard.writeText("Sabeehashir10@gmail.com");
@@ -23,7 +41,11 @@ const handleCopyEmail = (e) => {
 };
   return (
     <>
-      <Navbar onCopyEmail={handleCopyEmail}/>
+        <StarfieldBackground />
+        <Navbar
+          onCopyEmail={handleCopyEmail}
+          onOpenPalette={() => setIsPaletteOpen(true)}
+        />
 
       <main>
         <section id="home" className="hero-section alternate-bg">
@@ -73,7 +95,7 @@ const handleCopyEmail = (e) => {
         <ExperienceSection />
 
         <RevealOnScroll>
-            <ProjectsSection />
+          <ProjectsSection onSelectProject={setSelectedProject} />
         </RevealOnScroll>
         
 
@@ -82,8 +104,21 @@ const handleCopyEmail = (e) => {
       <footer>
         <p>&copy; 2026 Sabeeh Ashir. All rights reserved.</p>
       </footer>
+      
+      <CommandPalette
+        isOpen={isPaletteOpen}
+        onClose={() => setIsPaletteOpen(false)}
+        onCopyEmail={handleCopyEmail}
+        onSelectProject={setSelectedProject}
+      />
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+      
       <Toast message={toastMessage} />
-    </>
+          </>
   );
 }
 

@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { projectsData } from "../data/portfolioData";
-import ProjectModal from "./ProjectModal";
 import "../Css/interactive.css";
 
 const FILTERS = ["All", "React", "Full-Stack", "Python", "SQL", "C#"];
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ onSelectProject }) => {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects =
     activeFilter === "All"
@@ -39,7 +37,7 @@ const ProjectsSection = () => {
             <article
               key={project.id}
               className="project-card interactive-card"
-              onClick={() => setSelectedProject(project)}
+              onClick={() => onSelectProject(project)}
             >
               <figure className="project-image">
                 <img src={project.image} alt={project.title} />
@@ -54,11 +52,6 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
-
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   );
 };
