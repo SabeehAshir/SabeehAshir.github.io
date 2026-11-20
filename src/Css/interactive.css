@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  z-index: 1000;
+  z-index: 2000;
   animation: fadeIn 0.2s ease;
 }
 
@@ -94,8 +94,9 @@
 
 .modal-image {
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  max-height: 280px;
+  object-fit: contain;
+  background: #0f172a;
   display: block;
 }
 
@@ -261,7 +262,8 @@ body {
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

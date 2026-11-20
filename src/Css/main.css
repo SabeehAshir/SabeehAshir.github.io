@@ -10,14 +10,10 @@
 html {
     scroll-behavior: smooth; /* The magic property for gliding between sections */
 }
-
 body {
-    /* Merged your Skardu image with your rgb(37, 51, 50) dark teal color */
-    background-size: cover;
-    font-family: 'DM Sans', sans-serif;
-    color: white;
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: 'Inter', 'Segoe UI', sans-serif; /* replace with your original font from git diff */
+  color: #f8fafc;
+  line-height: 1.6;
 }
 
 /* =========================================
