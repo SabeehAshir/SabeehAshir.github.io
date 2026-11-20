@@ -13,8 +13,6 @@ html {
 
 body {
     /* Merged your Skardu image with your rgb(37, 51, 50) dark teal color */
-    background: linear-gradient(rgba(26, 36, 35, 0.92), rgba(26, 36, 35, 0.95)), 
-                url('../images/Skardu2.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'DM Sans', sans-serif;
     color: white;

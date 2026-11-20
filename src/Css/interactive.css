@@ -226,3 +226,101 @@
   z-index: 1200;
   animation: slideUp 0.25s ease;
 }
+/* Modern Tech Grid + Radial Glow Hero Background (Replaces Skardu2.jpg) */
+/* Global Page Background (Replaces Skardu2.jpg everywhere) */
+body {
+  background-color: #0b1120 !important;
+  background-image:
+    radial-gradient(circle at 50% 15%, rgba(59, 130, 246, 0.2), transparent 55%),
+    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 42px 42px, 42px 42px !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+}
+
+/* Remove old image backgrounds from individual sections */
+.hero-section,
+.page-section {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Subtle dark tint for alternating sections (e.g., Experience & Skills) */
+.page-section.alternate-bg {
+  background-color: rgba(15, 23, 42, 0.55) !important;
+}
+
+/* Scroll-Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Segmented Experience / Education Tab Switcher */
+.tab-switcher {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  margin: 0 auto 2.5rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tab-btn {
+  padding: 0.55rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+}
+
+.tab-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.tab-panel {
+  animation: tabFadeIn 0.3s ease;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

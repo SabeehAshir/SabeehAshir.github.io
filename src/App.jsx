@@ -5,6 +5,8 @@ import ProjectsSection from "./components/ProjectsSection";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Toast from "./components/Toast";
+import ExperienceSection from "./components/ExperienceSection";
+import RevealOnScroll from "./components/RevealOnScroll";
 function App() {
   const [toastMessage, setToastMessage] = useState("");
 
@@ -48,91 +50,32 @@ const handleCopyEmail = (e) => {
         </section>
 
         <section id="about" className="page-section">
-            <div className="container">
-                <div className="about-grid">
-                    <figure className="profile-frame">
-                        <img src="images/sabeeh-removebg-preview.png" alt="Sabeeh Ashir" />
-                    </figure>
-                    <div className="about-text">
-                        <h2>About Me</h2>
-                        <div className="accent-line-left"></div>
-                        <p className="subtitle">Final Year Computer Science Student @ QMUL</p>
-                        
-                        <p>I am a Final year Computer Science student at Queen Mary University of London with a passion for turning complex problems into clean, efficient software. Having established a strong technical foundation, I am actively expanding my expertise in modern web frameworks, Artificial Intelligence, and Cybersecurity.</p>
-                        
-                        <p>Beyond academics, I thrive in collaborative, agile environments. I am always eager to team up with other developers to build innovative solutions that make a real-world impact.</p>
+            <RevealOnScroll>
+                <div className="container">
+                    <div className="about-grid">
+                        <figure className="profile-frame">
+                            <img src="images/sabeeh-removebg-preview.png" alt="Sabeeh Ashir" />
+                        </figure>
+                        <div className="about-text">
+                            <h2>About Me</h2>
+                            <div className="accent-line-left"></div>
+                            <p className="subtitle">Final Year Computer Science Student @ QMUL</p>
+                            
+                            <p>I am a Final year Computer Science student at Queen Mary University of London with a passion for turning complex problems into clean, efficient software. Having established a strong technical foundation, I am actively expanding my expertise in modern web frameworks, Artificial Intelligence, and Cybersecurity.</p>
+                            
+                            <p>Beyond academics, I thrive in collaborative, agile environments. I am always eager to team up with other developers to build innovative solutions that make a real-world impact.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </RevealOnScroll>
         </section>
 
-        <section id="experience" className="page-section alternate-bg">
-            <div className="container">
+        <ExperienceSection />
 
-                <div className="section-header">
-                    <h2> Education</h2>
-                    <div className="accent-line"></div>
-                </div>
-
-                <div className="card-grid">
-                    <div className="card">
-                        <h3><img src="images/QMUL_logo.png" className="icon" alt="Ricards School" />Queen Mary University of London</h3>
-                        <p className="org">2024 - Present</p>
-                        <p>Currently studying Computer Science. Completed first-year modules including Programming, Computer Systems and Networking, and Logic and Discrete Structures.</p>
-                    </div>
-                    <div className="card">
-                        <h3><img src="images/Kingston_logo.png" className="icon" alt="Kingston college" />Kingston College</h3>
-                        <p className="org">2022 - 2023</p>
-                        <p>Access to Higher Education Diploma - Computing. Grasped good knowledge about C#, Database and Algorithms, Database implementation, and SQL.</p>
-                    </div>
-                </div>
-
-                <div className="section-header" style={{ marginTop: '4rem' }}>
-                    <h2>Experience</h2>
-                    <div className="accent-line"></div>
-                </div>
-                
-                <div className="card-grid">
-                    <div className="card">
-                        <h3><img src="images/ricards_logo.png" className="icon" alt="Ricards School" /> CS Teaching Assistant Intern</h3>
-                        <p className="org">Ricards Lodge High School (June 2026 - July 2026)</p>
-                        <p>Assisting in delivering the Computer Science curriculum, guiding students through foundational programming concepts and providing one-on-one technical support.</p>
-                    </div>
-                    <div className="card">
-                        <h3><img src="images/noor academy.png" className="icon" alt="Noor" /> Admin & IT Support</h3>
-                        <p className="org">Noor Academy (Continued)</p>
-                        <p>Providing essential technical support and administrative assistance for students and faculty. Managing IT resources, troubleshooting technical issues, and ensuring smooth operation of digital platforms to enhance the educational experience.</p>
-                    </div>
-                    <div className="card">
-                        <h3><img src="images/Voi.jpeg" className="icon" alt="VOI" /> Media Volunteer</h3>
-                        <p className="org">Voice of Islam</p>
-                        <p>Supported live broadcasts and technical operations in a high-pressure radio environment.</p>
-                    </div>
-                </div>
-
-                <div className="section-header" style={{ marginTop: '4rem' }}>
-                    <h2>Technical Skills</h2>
-                    <div className="accent-line"></div>
-                </div>
-                
-                <div className="skills-container">
-                    <div className="skill-chip">Java</div>
-                    <div className="skill-chip">JavaScript</div>
-                    <div className="skill-chip">C++</div>
-                    <div className="skill-chip">C#</div>
-                    <div className="skill-chip">Python</div>
-                    <div className="skill-chip">SQL</div>
-                    <div className="skill-chip">HTML</div>
-                    <div className="skill-chip">CSS</div>
-                    <div className="skill-chip">Next.js</div>
-                    <div className="skill-chip">React</div>
-                    <div className="skill-chip">Prisma</div>
-                    <div className="skill-chip">PostgreSQL</div>
-                </div>
-            </div>
-        </section>
-
-        <ProjectsSection />
+        <RevealOnScroll>
+            <ProjectsSection />
+        </RevealOnScroll>
+        
 
       </main>
 

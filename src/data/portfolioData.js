@@ -78,4 +78,77 @@ export const projectsData = [
     ],
     githubUrl: "https://github.com/SabeehAshir"
   }
+  
+];
+export const experienceData = [
+  {
+    id: 1,
+    role: "CS Teaching Assistant Intern",
+    org: "Ricards Lodge High School",
+    period: "June 2026 - July 2026",
+    logo: "/images/ricards_logo.png",
+    alt: "Ricards Lodge High School",
+    description:
+      "Assisted in delivering the Computer Science curriculum, guiding students through foundational programming concepts and providing one-on-one practical coding support."
+  },
+  {
+    id: 2,
+    role: "Admin & IT Support / CS Tutor",
+    org: "Noor Academy",
+    period: "April 2023 - Present",
+    logo: "/images/noor academy.png",
+    alt: "Noor Academy",
+    description:
+      "Managing IT infrastructure, automating administrative workflows, and tutoring students in Computer Science while maintaining reliable digital platforms."
+  },
+  {
+    id: 3,
+    role: "Media Volunteer",
+    org: "Voice of Islam",
+    period: "Volunteer",
+    logo: "/images/Voi.jpeg",
+    alt: "Voice of Islam",
+    description:
+      "Supported live broadcasts and technical studio operations in a fast-paced radio environment."
+  }
+];
+
+export const educationData = [
+  {
+    id: 1,
+    role: "BSc Computer Science (Final Year)",
+    org: "Queen Mary University of London",
+    period: "2024 - Present",
+    logo: "/images/QMUL_logo.png",
+    alt: "Queen Mary University of London",
+    description:
+      "Focusing on Software Engineering, Algorithms & Data Structures, Operating Systems, Database Systems, Web Programming, and Internet Protocols."
+  },
+  {
+    id: 2,
+    role: "Access to Higher Education Diploma - Computing",
+    org: "Kingston College",
+    period: "2022 - 2023",
+    logo: "/images/Kingston_logo.png",
+    alt: "Kingston College",
+    description:
+      "Built a strong foundation in C#, Database Design & Implementation, SQL, and core algorithms."
+  }
+];
+
+export const skillsData = [
+  "Java",
+  "JavaScript",
+  "C++",
+  "C#",
+  "Python",
+  "SQL",
+  "HTML",
+  "CSS",
+  "Next.js",
+  "React",
+  "Django",
+  "Vue.js",
+  "Prisma",
+  "PostgreSQL"
 ];
